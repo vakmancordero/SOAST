@@ -15,7 +15,7 @@ public class NotificationService {
 
     public NotificationService() {
         this.personDao = new PersonDao();
-        this.mailConnection = new MailConnection("vakmancordero@gmail.com", "jaqart_56923", "smtp.gmail.com", "587");
+        this.mailConnection = new MailConnection("", "", "smtp.gmail.com", "587");
     }
     
     public String sendMessage(Long personId, String subject, String message) {

@@ -23,6 +23,10 @@ public class GenericDaoHibernateImpl<T, PK extends Serializable>
     
     private Class<T> clazz;
     private SessionFactory sessionFactory;
+
+    public GenericDaoHibernateImpl() {
+        this.clazz();
+    }
     
     @Override
     public Class<T> clazz() {
@@ -175,6 +179,10 @@ public class GenericDaoHibernateImpl<T, PK extends Serializable>
         List<T> list = new ArrayList<>();
         
         try {
+            
+            System.out.println(this.clazz.getName());
+            
+            System.out.println(session == null);
             
             list = session.createCriteria(this.clazz).list();
             

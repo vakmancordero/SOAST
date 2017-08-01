@@ -16,6 +16,9 @@ public class HibernateUtil {
         try {
             sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
         } catch (HibernateException ex) {
+            
+            System.out.println("Error: " + ex.toString());
+            
             throw new ExceptionInInitializerError(ex);
         }
     }

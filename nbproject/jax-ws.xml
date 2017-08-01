@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="GrantWS">
-      <implementation-class>com.candlelabs.soast.webservice.GrantWS</implementation-class>
+    <service name="ConcessionWS">
+      <implementation-class>com.candlelabs.soast.webservice.ConcessionWS</implementation-class>
+    </service>
+    <service name="CourseWS">
+      <implementation-class>com.candlelabs.soast.webservice.CourseWS</implementation-class>
+    </service>
+    <service name="NotificationWS">
+      <implementation-class>com.candlelabs.soast.webservice.NotificationWS</implementation-class>
     </service>
   </services>
   <clients/>

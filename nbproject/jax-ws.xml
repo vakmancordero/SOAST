@@ -10,6 +10,12 @@
     <service name="NotificationWS">
       <implementation-class>com.candlelabs.soast.webservice.NotificationWS</implementation-class>
     </service>
+    <service name="CirculationWS">
+      <implementation-class>com.candlelabs.soast.webservice.CirculationWS</implementation-class>
+    </service>
+    <service name="PaymentOrderWS">
+      <implementation-class>com.candlelabs.soast.webservice.PaymentOrderWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

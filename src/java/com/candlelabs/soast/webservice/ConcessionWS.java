@@ -58,4 +58,8 @@ public class ConcessionWS {
                 person, folio, town, concessionType, expeditionDate, 
                 expirationDate, expeditionPlace, unitType, licensePlate);
     }
+    
+    
+    // expedicionConcesion() -> Concession
+            
 }

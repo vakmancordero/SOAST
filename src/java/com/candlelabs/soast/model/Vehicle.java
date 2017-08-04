@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="vehicle", catalog="soast")
+@Table(name="vehicle")
 public class Vehicle  implements java.io.Serializable {
     
     private Long id;

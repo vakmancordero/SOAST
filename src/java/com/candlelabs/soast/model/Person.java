@@ -12,7 +12,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name="person", catalog="soast")
+@Table(name="person")
 public class Person implements Serializable {
     
     private Long id;

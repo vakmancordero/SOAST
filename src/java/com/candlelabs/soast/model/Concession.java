@@ -15,7 +15,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name="concession", catalog="soast")
+@Table(name="concession")
 public class Concession  implements Serializable {
     
     private Long id;

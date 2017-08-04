@@ -6,6 +6,7 @@ import com.candlelabs.soast.persistence.GenericDao;
 import com.candlelabs.soast.persistence.dao.ConcessionDao;
 import com.candlelabs.soast.persistence.dao.PersonDao;
 import java.util.Date;
+import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
 
@@ -48,6 +49,16 @@ public class ConcessionService {
                         unitType, licensePlate
                 )
         );
+    }
+    
+    public boolean deleteConcession(Long idConcession) {
+        return this.concessionDao.delete(
+                this.concessionDao.read(idConcession)
+        );
+    }
+    
+    public List<Concession> listConcessions() {
+        return this.concessionDao.readAll();
     }
     
     public Concession findByName(String concessionName) {

@@ -40,9 +40,11 @@ public class PeopleService {
     }
     
     public Long createPerson(Person person){
-        
         return this.personDao.create(person);
-        
+    }
+    
+    public boolean deletePerson(Long personId) {
+        return this.personDao.delete(this.personDao.read(personId));
     }
     
 }

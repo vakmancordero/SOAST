@@ -43,23 +43,19 @@ Contributor(s):
     Julio De Buen
 -->
 <hibernate-configuration>
-    <session-factory>
-        
-        <property name="hibernate.hbm2ddl.auto">update</property>
-        
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/soast</property>
-        <property name="hibernate.connection.username">vaksfk</property>
-        <property name="hibernate.connection.password">jaqart_</property>
-        
-        <property name="show_sql">true</property>
-        <property name="format_sql">true</property>
-        
-        <mapping class="com.candlelabs.soast.model.Person"/>
-        <mapping class="com.candlelabs.soast.model.CirculationCard"/>
-        <mapping class="com.candlelabs.soast.model.Concession"/>
-        <mapping class="com.candlelabs.soast.model.Course"/>
-        <mapping class="com.candlelabs.soast.model.Vehicle"/>
-    </session-factory>
+  <session-factory>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://69.162.89.138:3306/kaizenso_soast</property>
+    <property name="hibernate.connection.username">kaizenso_vaksfk</property>
+    <property name="hibernate.connection.password">jaqart_56923</property>
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <mapping class="com.candlelabs.soast.model.Person"/>
+    <mapping class="com.candlelabs.soast.model.CirculationCard"/>
+    <mapping class="com.candlelabs.soast.model.Concession"/>
+    <mapping class="com.candlelabs.soast.model.Course"/>
+    <mapping class="com.candlelabs.soast.model.Vehicle"/>
+  </session-factory>
 </hibernate-configuration>

@@ -2,6 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Users/Max/Documents/CandleLabs/Projects/SOAST/src/java/com/candlelabs/soast/persistence/GenericDaoHibernateImpl.java</file>
+            <file>file:/Users/Max/Documents/CandleLabs/Projects/SOAST/src/java/com/candlelabs/soast/model/Concession.java</file>
+            <file>file:/Users/Max/Documents/CandleLabs/Projects/SOAST/src/java/com/candlelabs/soast/persistence/dao/PersonDao.java</file>
+            <file>file:/Users/Max/Documents/CandleLabs/Projects/SOAST/src/java/com/candlelabs/soast/webservice/ConcessionWS.java</file>
+            <file>file:/Users/Max/Documents/CandleLabs/Projects/SOAST/src/java/com/candlelabs/soast/webservice/PersonWS.java</file>
+            <file>file:/Users/Max/Documents/CandleLabs/Projects/SOAST/nbproject/build-impl.xml</file>
+            <file>file:/Users/Max/Documents/CandleLabs/Projects/SOAST/src/java/com/candlelabs/soast/persistence/GenericDao.java</file>
+            <file>file:/Users/Max/Documents/CandleLabs/Projects/SOAST/src/java/com/candlelabs/soast/service/PeopleService.java</file>
+            <file>file:/Users/Max/Documents/CandleLabs/Projects/SOAST/src/java/com/candlelabs/soast/persistence/dao/CirculationCardDao.java</file>
+            <file>file:/Users/Max/Documents/CandleLabs/Projects/SOAST/src/java/com/candlelabs/soast/service/ConcessionService.java</file>
+            <file>file:/Users/Max/Documents/CandleLabs/Projects/SOAST/src/java/com/candlelabs/soast/webservice/PaymentOrderWS.java</file>
+            <file>file:/Users/Max/Documents/CandleLabs/Projects/SOAST/src/java/com/candlelabs/soast/persistence/dao/ConcessionDao.java</file>
+        </group>
     </open-files>
 </project-private>

@@ -4,6 +4,7 @@ import com.candlelabs.soast.model.Concession;
 import com.candlelabs.soast.model.Person;
 import com.candlelabs.soast.persistence.GenericDao;
 import com.candlelabs.soast.persistence.dao.ConcessionDao;
+import com.candlelabs.soast.persistence.dao.PersonDao;
 import java.util.Date;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
@@ -15,9 +16,13 @@ import org.hibernate.criterion.Restrictions;
 public class ConcessionService {
     
     private GenericDao<Concession, Long> concessionDao;
+    
+    private GenericDao<Person, Long> personDao;
+    
 
     public ConcessionService() {
         this.concessionDao = new ConcessionDao();
+        this.personDao = new PersonDao();
     }
     
     protected GenericDao<Concession, Long> getDao() {
@@ -29,10 +34,12 @@ public class ConcessionService {
     }
     
     public Long saveConcession(
-            Person person, String folio, String town, 
+            Long idPerson, String folio, String town, 
             String concessionType, Date expeditionDate, 
             Date expirationDate, String expeditionPlace, 
             String unitType, String licensePlate) {
+        
+        Person person = this.personDao.read(idPerson);
         
         return this.concessionDao.create(
                 new Concession(

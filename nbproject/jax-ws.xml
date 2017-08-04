@@ -16,6 +16,9 @@
     <service name="PaymentOrderWS">
       <implementation-class>com.candlelabs.soast.webservice.PaymentOrderWS</implementation-class>
     </service>
+    <service name="PersonWS">
+      <implementation-class>com.candlelabs.soast.webservice.PersonWS</implementation-class>
+    </service>
   </services>
   <clients/>
 </jax-ws>

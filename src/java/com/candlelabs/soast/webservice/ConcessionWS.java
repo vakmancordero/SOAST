@@ -34,15 +34,9 @@ public class ConcessionWS {
      */
     @WebMethod(operationName = "saveConcession")
     public Long saveConcession(
-            
-            // Person
-            @WebParam(name = "name") String name,
-            @WebParam(name = "rfc") String rfc,
-            @WebParam(name = "address") String address,
-            @WebParam(name = "birthday") Date birthday,
-            @WebParam(name = "nacionality") String nacionality,
-            
-            // Concession
+            //Person
+            @WebParam(name = "folioPerson") Long idPerson,
+            // ConcessionS
             @WebParam(name = "folio") String folio,
             @WebParam(name = "town") String town,
             @WebParam(name = "concessionType") String concessionType,
@@ -52,10 +46,10 @@ public class ConcessionWS {
             @WebParam(name = "unitType") String unitType,
             @WebParam(name = "licensePlate") String licensePlate) {
         
-        Person person = new Person(name, rfc, address, nacionality, birthday);
+
         
         return this.concessionService.saveConcession(
-                person, folio, town, concessionType, expeditionDate, 
+                idPerson, folio, town, concessionType, expeditionDate, 
                 expirationDate, expeditionPlace, unitType, licensePlate);
     }
     

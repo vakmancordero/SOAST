@@ -1,9 +1,14 @@
 package com.candlelabs.soast.service;
 
 import com.candlelabs.soast.model.CirculationCard;
+import com.candlelabs.soast.model.Concession;
+import com.candlelabs.soast.model.Person;
+import com.candlelabs.soast.model.Vehicle;
 import com.candlelabs.soast.persistence.GenericDao;
 import com.candlelabs.soast.persistence.dao.CirculationCardDao;
+import java.util.Date;
 import java.util.List;
+import javax.jws.WebParam;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
 
@@ -14,6 +19,16 @@ import org.hibernate.criterion.Restrictions;
 public class CirculationService {
     
     private GenericDao<CirculationCard, Long> circulationCardDao;
+    private GenericDao<Person, Long> personDao;
+    private GenericDao<Vehicle, Long> vehicleDao;
+
+
+    
+    public Long createCard(CirculationCard card){
+        
+        return this.circulationCardDao.create(card);
+        
+    }
 
     public CirculationService() {
         this.circulationCardDao = new CirculationCardDao();
@@ -33,6 +48,18 @@ public class CirculationService {
     
     public List<CirculationCard> getCirculationCards() {
         return this.circulationCardDao.readAll();
+    }
+    
+    public Long saveCard(
+            Long personId, Long vehicleId, String licensePlate, 
+            Date expeditionDate, Date expirationDate) {
+        
+        Person person = this.personDao.read(personId);
+        Vehicle vehicle = this.vehicleDao.read(vehicleId);
+        
+        return this.circulationCardDao.create(
+                new CirculationCard(person, vehicle, licensePlate, expeditionDate, expirationDate)
+        );
     }
     
     public CirculationCard findByName(String circulationCardName) {

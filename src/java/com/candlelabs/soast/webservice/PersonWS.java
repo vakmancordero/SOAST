@@ -42,7 +42,7 @@ public class PersonWS {
             @WebParam(name = "email") String email,
             @WebParam(name = "cellphone") String cellphone) {
         
-        Person person = new Person(name, rfc, address, nacionality, birthday);
+        Person person = new Person(name, rfc, address, nacionality, birthday, email, cellphone);
         //System.out.println(birthday);
         return this.personService.createPerson(person);
     }

@@ -27,14 +27,19 @@ public class Person implements Serializable {
     public Person() {
         
     }
-    
-    public Person(String name, String rfc, String address, String nacionality, Date birthday) {
+
+    public Person(String name, String rfc, String address, String nacionality, Date birthday, String email, String cellphone) {
         this.name = name;
         this.rfc = rfc;
         this.address = address;
         this.nacionality = nacionality;
         this.birthday = birthday;
+        this.email = email;
+        this.cellphone = cellphone;
     }
+    
+    
+   
     
     @Id 
     @GeneratedValue(strategy=GenerationType.IDENTITY)

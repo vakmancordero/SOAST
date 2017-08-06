@@ -17,15 +17,6 @@ public class PersonWS {
 
     private final PeopleService personService = new PeopleService();
     
-    private Long id;
-    private String name;
-    private String rfc;
-    private String address;
-    private String nacionality;
-    private Date birthday;
-    private String email;
-    private String cellphone;
-    
     @WebMethod(operationName = "createPerson")
     public Long createPerson(
             
@@ -37,19 +28,18 @@ public class PersonWS {
             @WebParam(name = "email") String email,
             @WebParam(name = "cellphone") String cellphone) {
         
-        Person person = new Person(name, rfc, address, nacionality, birthday, email, cellphone);
-        //System.out.println(birthday);
+        Person person = new Person(name, rfc, address, nationality, birthday, email, cellphone);
         return this.personService.createPerson(person);
     }
     
-    @WebMethod(operationName = "createPerson")
+    @WebMethod(operationName = "deletePerson")
     public boolean deletePerson(@WebParam(name = "personId") Long personId) {
         return this.personService.deletePerson(personId);
     }
     
-//    @WebMethod(operationName = "createPerson")
-//    public List<Person> listPersons() {
-//        return this.personService.createPerson(personId);
-//    }
+    @WebMethod(operationName = "listPersons")
+    public List<Person> listPersons() {
+        return this.personService.listPersons();
+    }
     
 }

@@ -3,6 +3,7 @@ package com.candlelabs.soast.service;
 import com.candlelabs.soast.model.Person;
 import com.candlelabs.soast.persistence.GenericDao;
 import com.candlelabs.soast.persistence.dao.PersonDao;
+import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Restrictions;
 
@@ -45,6 +46,10 @@ public class PeopleService {
     
     public boolean deletePerson(Long personId) {
         return this.personDao.delete(this.personDao.read(personId));
+    }
+    
+    public List<Person> listPersons() {
+        return this.personDao.readAll();
     }
     
 }

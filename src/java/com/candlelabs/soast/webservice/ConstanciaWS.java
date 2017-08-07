@@ -14,17 +14,16 @@ import javax.jws.WebParam;
  *
  * @author Max
  */
-@WebService(serviceName = "ExpedirConstancia")
+@WebService(serviceName = "ConstanciaWS")
 public class ConstanciaWS {
     
-    ConstanciaService expedirConstacia = new ConstanciaService();
+    private final ConstanciaService expedirConstacia = new ConstanciaService();
     
     @WebMethod(operationName = "expedirConstancia")
     public String expedirConstancia(
             @WebParam(name = "idPerson") Long idPerson,
             @WebParam(name = "idConcesion") Long idConcesion) {
         
-        return this.expedirConstacia.expedirConstancia
-        (idPerson,idConcesion);
+        return this.expedirConstacia.expedirConstancia(idPerson, idConcesion);
     }
 }

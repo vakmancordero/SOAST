@@ -33,7 +33,7 @@ public class ConstanciaService {
             return "La secretaria de transportes hace constar que el ciudadano " + person.getName() + 
                 " con RFC: " + person.getRfc() + " de nacionalidad " + 
                 person.getNacionality() + " es posedor de la Concesión con número de folio " +
-                concession.getFolio() +" expedida en "+ concession.getExpeditionPlace() + 
+                concession.getId() +" expedida en "+ concession.getExpeditionPlace() + 
                 " con vigencia hasta el " + concession.getExpirationDate().toString();
         }else{
             return "La persona por la cual este buscando una concesión no posee "

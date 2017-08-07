@@ -35,7 +35,7 @@ public class ConcessionService {
     }
     
     public Long saveConcession(
-            Long idPerson, String folio, String town, 
+            Long idPerson, String town, 
             String concessionType, Date expeditionDate, 
             Date expirationDate, String expeditionPlace, 
             String unitType, String licensePlate) {
@@ -44,7 +44,7 @@ public class ConcessionService {
         
         return this.concessionDao.create(
                 new Concession(
-                        person, folio, town, concessionType, 
+                        person, town, concessionType, 
                         expeditionDate, expirationDate, expeditionPlace, 
                         unitType, licensePlate
                 )

@@ -1,7 +1,6 @@
 package com.candlelabs.soast.webservice;
 
 import com.candlelabs.soast.model.Concession;
-import com.candlelabs.soast.model.Person;
 import com.candlelabs.soast.service.ConcessionService;
 import java.util.Date;
 import java.util.List;
@@ -20,7 +19,6 @@ public class ConcessionWS {
     
     /**
      * @param idPerson
-     * @param folio
      * @param town
      * @param concessionType
      * @param expeditionDate
@@ -30,12 +28,11 @@ public class ConcessionWS {
      * @param licensePlate
      * @return 
      */
-    @WebMethod(operationName = "saveConcession")
-    public Long saveConcession(
+    @WebMethod(operationName = "createConcession")
+    public Long createConcession(
             //Person
-            @WebParam(name = "folioPerson") Long idPerson,
+            @WebParam(name = "idPerson") Long idPerson,
             // ConcessionS
-            @WebParam(name = "folio") String folio,
             @WebParam(name = "town") String town,
             @WebParam(name = "concessionType") String concessionType,
             @WebParam(name = "expeditionDate") Date expeditionDate,
@@ -45,10 +42,9 @@ public class ConcessionWS {
             @WebParam(name = "licensePlate") String licensePlate) {
         
         return this.concessionService.saveConcession(
-                idPerson, folio, town, concessionType, expeditionDate, 
+                idPerson, town, concessionType, expeditionDate, 
                 expirationDate, expeditionPlace, unitType, licensePlate);
     }
-    
     
     @WebMethod(operationName = "deleteConcession")
     public boolean deleteConcession(

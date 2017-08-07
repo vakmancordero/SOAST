@@ -20,7 +20,6 @@ public class Concession  implements Serializable {
     
     private Long id;
     private Person person;
-    private String folio;
     private String town;
     private String concessionType;
     private Date expeditionDate;
@@ -33,9 +32,8 @@ public class Concession  implements Serializable {
         
     }
     
-    public Concession(Person person, String folio, String town, String concessionType, Date expeditionDate, Date expirationDate, String expeditionPlace, String unitType, String licensePlate) {
+    public Concession(Person person, String town, String concessionType, Date expeditionDate, Date expirationDate, String expeditionPlace, String unitType, String licensePlate) {
         this.person = person;
-        this.folio = folio;
         this.town = town;
         this.concessionType = concessionType;
         this.expeditionDate = expeditionDate;
@@ -56,7 +54,7 @@ public class Concession  implements Serializable {
         this.id = id;
     }
     
-    @OneToOne(cascade = {CascadeType.ALL})
+    @OneToOne
     @JoinColumn(name = "person_id")
     public Person getPerson() {
         return this.person;
@@ -64,15 +62,6 @@ public class Concession  implements Serializable {
     
     public void setPerson(Person personId) {
         this.person = personId;
-    }
-    
-    @Column(name="folio")
-    public String getFolio() {
-        return this.folio;
-    }
-    
-    public void setFolio(String folio) {
-        this.folio = folio;
     }
     
     @Column(name="town")
